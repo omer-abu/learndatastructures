@@ -1,0 +1,101 @@
+.sidebar {
+    z-index: 10;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 240px;
+    height: 100vh;
+
+    color: whitesmoke;
+
+    >.sidebar-bg {
+        height: 100%;
+        background-color: $bg-darker;
+
+        .sidebar-content {
+            h1 {
+                margin: 0 0 1em;
+                padding: .5em;
+                border-bottom: 1px solid grey;
+                font-size: 1.25em;
+            }
+
+            .sidebar-item {
+                font-family: monospace;
+                font-size: 12px;
+
+                padding: 1em;
+                background-color: $bg-lighter;
+                border-block: solid 1px $bg-lighter-hover;
+
+                cursor: pointer;
+                user-select: none;
+
+                &:hover,
+                &.current {
+                    background-color: $bg-lighter-hover;
+                }
+
+                &:not(:last-child) {
+                    margin-block-end: .5em;
+                }
+            }
+        }
+    }
+
+    .collapse-btn {
+        position: absolute;
+        bottom: 2em;
+        right: -1em;
+
+        display: grid;
+        place-items: center;
+
+        width: 60px;
+        aspect-ratio: 1/1;
+
+        color: inherit;
+        background-color: $bg-lighter;
+        border: solid 1px $bg-lighter-hover;
+        border-radius: 8px;
+        text-align: center;
+
+        box-shadow: none;
+
+        >div {
+            color: white;
+
+            svg {
+                width: 32px;
+                height: 32px;
+                fill: $bg-darker;
+            }
+
+            &.flipped {
+                transform: scaleX(-100%);
+            }
+        }
+
+        &:hover {
+            background-color: $bg-lighter-hover;
+        }
+    }
+}
+
+.sidebar-bg,
+.collapse-btn {
+    transition: transform 0.4s;
+}
+
+.sidebar-bg.expanded,
+.collapse-btn.expanded {
+    transform: translateX(0);
+}
+
+.sidebar-bg.collapsed {
+    transform: translateX(-100%);
+}
+
+.collapse-btn.collapsed {
+    transform: translateX(-250%);
+}

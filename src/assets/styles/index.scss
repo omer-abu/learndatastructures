@@ -1,0 +1,34 @@
+* {
+    margin: 0
+}
+
+body {
+    min-width: 90%;
+    margin-inline: auto;
+    min-height: 100vh;
+    height: 100vh;
+    background-color: $bg-primary;
+    overflow: hidden;
+}
+
+button {
+    font-size: 1rem;
+    overflow: hidden;
+
+    color: whitesmoke;
+    background-color: $bg-lighter;
+
+    border: solid 1px $bg-lighter-hover;
+    border-radius: 4px;
+    box-shadow: 0 0 8px $bg-lighter-hover;
+
+    cursor: pointer;
+    
+    &:hover {
+        background-color: $bg-lighter-hover;
+    }
+}
+
+label {
+    color: whitesmoke;
+}

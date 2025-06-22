@@ -1,0 +1,45 @@
+.item {
+    display: grid;
+    place-items: center;
+    width: 15vw;
+    aspect-ratio: 1/1;
+
+    margin: auto;
+
+    border-radius: .5rem;
+    user-select: none;
+
+    font-size: 4vw;
+
+    &.acc-one {
+        background-color: $acc-one;
+
+        &:hover {
+            background-color: $acc-one-hover;
+        }
+    }
+
+    &.acc-two {
+        background-color: $acc-two;
+
+        &:hover {
+            background-color: $acc-two-hover;
+        }
+    }
+
+    &.acc-three {
+        background-color: $acc-three;
+
+        &:hover {
+            background-color: $acc-three-hover;
+        }
+    }
+
+    &.acc-four {
+        background-color: $acc-four;
+
+        &:hover {
+            background-color: $acc-four-hover;
+        }
+    }
+}

@@ -1,0 +1,35 @@
+.queue-controls {
+    display: grid;
+    grid-template-areas:
+        "enq deq"
+        "cap cap";
+    
+    row-gap: 24px;
+
+    .enqueue-btn {
+        grid-area: enq;
+    }
+
+    .dequeue-btn {
+        grid-area: deq;
+    }
+
+    .capacity-ctrl {
+        grid-area: cap;
+        width: 100%;
+        text-align: center;
+
+        input {
+            background-color: $bg-darker;
+            color: whitesmoke;
+            border: none;
+            text-align: center;
+            padding: 4px;
+            -moz-appearance: textfield;
+
+            &:focus {
+                outline: none;
+            }
+        }
+    }
+}

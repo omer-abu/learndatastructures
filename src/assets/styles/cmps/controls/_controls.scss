@@ -1,0 +1,12 @@
+.controls {
+    width: 30vw;
+    margin: 50px auto 0;
+
+    display: flex;
+    justify-content: space-around;
+
+    button {
+        width: 12vw;
+        padding: .5em;
+    }
+}

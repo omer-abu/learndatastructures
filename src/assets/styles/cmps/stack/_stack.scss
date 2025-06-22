@@ -1,0 +1,13 @@
+.stack {
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 10px;
+
+    position: absolute;
+    top: 40%;
+    left: calc(50% - 7.5vw);
+    
+    .stack-item:not(:last-child) {
+        margin-block-end: 2vh;
+    }
+}

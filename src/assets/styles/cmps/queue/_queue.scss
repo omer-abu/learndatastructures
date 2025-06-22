@@ -1,0 +1,32 @@
+.queue, .placeholder-container {
+    position: absolute;
+    top: calc(50% - 5vw);
+
+    width: 100%;
+
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.queue {
+    .stack-item:not(:last-child) {
+        margin-block-end: 2vh;
+    }
+}
+
+.queue-item, .placeholder {
+    width: 10vw;
+    aspect-ratio: 1/1;
+}
+
+
+.placeholder-container {
+    z-index: -1;
+}
+
+.placeholder {
+    margin: 0;
+
+    background-color: $bg-lighter;
+    border: 2px dashed $bg-lighter-hover;
+}
