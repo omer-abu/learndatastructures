@@ -32,6 +32,7 @@ export default function Sidebar({ onItemSelected }: { onItemSelected: Function }
                     {
                         structures.map((item, idx) => (
                             <SidebarItem
+                                key={idx}
                                 name={item}
                                 current={idx === currentItem}
                                 setSelectedItem={() => setSelectedItem(idx)}
