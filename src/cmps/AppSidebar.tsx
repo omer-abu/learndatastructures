@@ -1,6 +1,10 @@
 import { useRef, useState } from "react"
 import SidebarItem from "./SidebarItem"
 import { ReactSVG } from "react-svg"
+import arrowIcon from "../assets/icons/arrow.svg"
+
+<img src={arrowIcon} />
+
 
 const structures = ["Stack", "Queue"]
 
@@ -43,7 +47,7 @@ export default function Sidebar({ onItemSelected }: { onItemSelected: Function }
             </section>
 
             <button ref={collapseBtnRef} className="collapse-btn collapsed" onClick={onCollapseClick}>
-                <ReactSVG className={`${collapsed ? "flipped" : ""}`} src="/icons/arrow.svg" />
+                <ReactSVG className={`${collapsed ? "flipped" : ""}`} src={arrowIcon} />
             </button>
         </section>
     )
